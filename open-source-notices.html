@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pet Diary Open Source Notices</title>
+    <meta
+      name="description"
+      content="Pet Diary open-source notices, license texts, source archives, checksums, build information, and replacement guidance for FFmpeg and FFmpegKit."
+    >
+    <meta name="theme-color" content="#0b0810">
+    <link rel="icon" href="assets/pet-diary-icon.png">
+    <link rel="apple-touch-icon" href="assets/pet-diary-icon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand-link" href="index.html">
+          <img class="brand-mark" src="assets/pet-diary-icon.png" alt="" width="40" height="40">
+          <span>Pet Diary</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="open-source-notices.html" aria-current="page">Open Source</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="content" class="page-main">
+      <section class="page-hero" aria-labelledby="notices-title">
+        <p class="eyebrow">Legal</p>
+        <h1 id="notices-title">Open Source Notices</h1>
+        <p class="lead">
+          Licence, source and build information for the open-source media
+          components used by Pet Diary 1.0.0.
+        </p>
+      </section>
+
+      <div class="content legal-content">
+        <section class="legal-section" aria-labelledby="components">
+          <h2 id="components">Media components</h2>
+          <p>
+            Pet Diary uses the following open-source components for on-device
+            media inspection, audio processing and slideshow-video creation:
+          </p>
+          <ul class="legal-list">
+            <li>
+              <strong>FFmpeg 8.1.2</strong>—<code>libavcodec</code>,
+              <code>libavdevice</code>, <code>libavfilter</code>,
+              <code>libavformat</code>, <code>libavutil</code>,
+              <code>libswresample</code> and <code>libswscale</code>—copyright
+              the FFmpeg project contributors.
+            </li>
+            <li>
+              <strong>FFmpegKit</strong> and
+              <strong><code>ffmpeg_kit_flutter_new_min 3.6.2</code></strong>,
+              which provide the native and Flutter interfaces used by Pet Diary.
+            </li>
+          </ul>
+          <p>
+            FFmpeg reports that it is provided under the GNU Lesser General
+            Public License, version 3 or later (LGPLv3+). FFmpegKit and the
+            Flutter package provide the GNU Lesser General Public License,
+            version 3 (LGPLv3). Pet Diary's iOS build uses the package's non-GPL
+            <code>min</code> variant.
+          </p>
+          <p>
+            The shipped FFmpeg configuration does not contain
+            <code>--enable-gpl</code> or <code>--enable-nonfree</code>. The
+            native FFmpeg and FFmpegKit libraries are packaged as separate
+            dynamic frameworks; the package's Flutter and Objective-C binding
+            code is compiled into the App.
+          </p>
+          <p>
+            LGPL-covered components are provided without warranty to the extent
+            permitted by law. Nothing in Pet Diary's terms is intended to
+            restrict modification of those components or reverse engineering
+            undertaken to debug modifications where the LGPL permits it.
+          </p>
+        </section>
+
+        <section class="legal-section" aria-labelledby="licenses">
+          <h2 id="licenses">License texts</h2>
+          <ul class="legal-list">
+            <li>
+              <a href="https://www.gnu.org/licenses/lgpl-3.0.txt">GNU Lesser General Public License version 3</a>
+            </li>
+            <li>
+              <a href="https://www.gnu.org/licenses/gpl-3.0.txt">GNU General Public License version 3</a>,
+              incorporated by and required to accompany LGPLv3
+            </li>
+          </ul>
+          <p>
+            Verbatim copies of both licenses and Pet Diary's release notice are
+            also included in the App bundle under
+            <code>flutter_assets/assets/legal/</code>.
+          </p>
+        </section>
+
+        <section class="legal-section" aria-labelledby="source-materials">
+          <h2 id="source-materials">Source and build materials</h2>
+          <p>
+            The following version-specific materials identify the components
+            selected for Pet Diary 1.0.0 and the upstream source/build bases
+            reported by the supplied binaries.
+          </p>
+
+          <h3>Flutter package 3.6.2</h3>
+          <p>
+            <a href="https://pub.dev/api/archives/ffmpeg_kit_flutter_new_min-3.6.2.tar.gz">Download the ffmpeg_kit_flutter_new_min 3.6.2 source archive</a>.
+          </p>
+          <p>
+            SHA-256:
+            <code>ae8eb220659cfc941ed651da1c32f910796b461dd6611abf12b863f665aa8ca5</code>
+          </p>
+
+          <h3>FFmpeg n8.1.2</h3>
+          <p>
+            <a href="https://github.com/arthenica/FFmpeg/archive/refs/tags/n8.1.2.tar.gz">Download the FFmpeg n8.1.2 source archive</a>.
+            The embedded libraries report version <code>n8.1.2</code>.
+          </p>
+          <p>
+            Peeled tag commit:
+            <code>38b88335f99e76ed89ff3c93f877fdefce736c13</code>
+          </p>
+
+          <h3>FFmpegKit v6.0.LTS native source and build scripts</h3>
+          <p>
+            <a href="https://github.com/arthenica/ffmpeg-kit/archive/refs/tags/v6.0.LTS.tar.gz">Download the FFmpegKit v6.0.LTS source archive</a>.
+            Embedded build paths identify this FFmpegKit source line.
+          </p>
+          <p>
+            Tag commit:
+            <code>d6be56d7aec286eb3c292d6b23ff07a6b70d8693</code>
+          </p>
+
+          <h3>Supplied iOS min framework archive</h3>
+          <p>
+            <a href="https://github.com/sk3llo/ffmpeg_kit_flutter/releases/download/8.1.2-min/ffmpeg-kit-ios-min-8.1.2.zip">Download the supplied iOS min binary reference archive</a>.
+          </p>
+          <p>
+            SHA-256:
+            <code>7564f4715ce5d3eaad177a737d9f840b2cafcda41d621f950b1ee312c88939fa</code>
+          </p>
+        </section>
+
+        <section class="legal-section" aria-labelledby="build-guidance">
+          <h2 id="build-guidance">Build and replacement guidance</h2>
+          <p>
+            The package's <code>scripts/setup_ios.sh</code> downloads the iOS
+            reference archive, removes bitcode, separates its iOS device slice,
+            and packages each library as an XCFramework.
+          </p>
+          <p>
+            Configure information embedded in the distributed libraries reports
+            an arm64 iOS build using FFmpeg 8.1.2, shared libraries,
+            <code>--enable-version3</code>, <code>--enable-shared</code>,
+            <code>--disable-static</code>, <code>--enable-videotoolbox</code>,
+            <code>--enable-avfoundation</code>, <code>--enable-zlib</code>,
+            <code>--disable-programs</code> and <code>--disable-doc</code>. It
+            does not report GPL or nonfree enablement. A line-wrapped,
+            duplicate-normalized copy of the full embedded configure options is
+            included in the App-bundled <code>OPEN_SOURCE_NOTICES.txt</code>.
+          </p>
+          <p>
+            An interface-compatible modified native build can be tested by
+            replacing the LGPL-covered frameworks in a development copy of the
+            App, rebuilding or re-signing that copy with Xcode, and installing
+            it with the developer's own Apple signing identity. Apple platform
+            signing and installation rules still apply; Pet Diary does not
+            provide Apple signing credentials.
+          </p>
+          <p>
+            This native-framework guidance does not by itself provide relinking
+            materials for the Flutter and Objective-C binding code compiled
+            into the App.
+          </p>
+        </section>
+
+        <section class="legal-section" aria-labelledby="other-content">
+          <h2 id="other-content">Other bundled content</h2>
+          <p>
+            Open-source software notices are separate from the credits and
+            license terms for bundled soundtrack recordings and sample media.
+            Those credits are distributed with the project and relevant App
+            materials.
+          </p>
+        </section>
+
+        <section class="legal-section" aria-labelledby="notice-contact">
+          <h2 id="notice-contact">Questions</h2>
+          <p>
+            For questions about these notices, contact CreativeSky at
+            <a href="mailto:willsontat@gmail.com">willsontat@gmail.com</a>.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>&copy; 2026 CreativeSky. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
